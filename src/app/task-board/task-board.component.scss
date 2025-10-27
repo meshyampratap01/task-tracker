@@ -1,5 +1,4 @@
 .container{
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,6 +18,7 @@
 
     .board-container{
         margin-top: 20px;
+        margin-bottom: 20px;
         width: 90%;
         height: 70vh;
         background-color: var(--color-surface);
