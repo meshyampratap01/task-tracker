@@ -28,7 +28,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
-        overflow-x: hidden;
+        overflow: auto;
         padding: var(--space-md);
     }
 }
@@ -42,4 +42,5 @@ app-task-column {
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.319);
   min-height: 100%; 
+  overflow: auto;
 }

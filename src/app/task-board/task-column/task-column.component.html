@@ -1,9 +1,11 @@
 <div class="container">
   <h2>{{ label() }}</h2>
 
+  <div class="tasks-list">
   @if (tasks().length==0) {
   <p>No tasks available with {{ label() }} status.</p>
   } @else { @for (task of tasks(); track task.id) {
-  <app-task-card [task]="task"></app-task-card>
+  <app-task-card [task]="task" [cdkDragData]="task" cdkDrag></app-task-card>
   } }
+  </div>
 </div>
