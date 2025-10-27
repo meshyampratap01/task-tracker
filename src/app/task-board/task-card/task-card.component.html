@@ -1,0 +1,5 @@
+<div class="task-card">
+    <h3>{{ task().title }}</h3>
+    <p>{{ task().description }}</p>
+    <p><strong>Created At:</strong> {{ task().createdAt | date: 'short' }}</p>
+</div>

@@ -1,0 +1,12 @@
+<app-header></app-header>
+<div class="container">
+    <div class="info-container">
+    <h2>Kanban Style Task Board</h2>
+    <p>Manage your tasks efficiently with our intuitive task board. Drag and drop tasks between columns to keep track of your progress.</p>
+    </div>
+  <div class="board-container">
+    @for (column of columns; track column.label) {
+    <app-task-column [tasks]="gettasksByStatus(column.status)" [label]="column.label"></app-task-column>
+    }
+  </div>
+</div>

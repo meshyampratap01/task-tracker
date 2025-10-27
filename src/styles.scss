@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+:root {
+	--color-primary: #1976d2;
+	--color-primary-700: #125ea8;
+	--color-bg: #f7f9fb;
+	--color-text: #222222;
+	--color-muted: #6b7280;
+
+
+	--color-surface: #ffffff;
+	--color-card-bg: #ffffffa5;
+	--color-danger: #d32f2f;
+	--color-danger-700: #b71c1c;
+
+	--radius-sm: 4px;
+	--space-md: 1rem;
+}
+
+html, body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	font-family: "Segoe UI", "Roboto", Arial, sans-serif;
+	font-size: 16px;
+	background-color: var(--color-bg);
+	color: var(--color-text);
+}
