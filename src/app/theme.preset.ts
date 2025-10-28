@@ -32,21 +32,21 @@ export const customPreset = definePreset(Aura, {
         surface: {
         }
       },
-      dark: {
-        primary: {
-          color: "#e0e7ff",
-          hoverColor: "#c0d4ff",
-          activeColor: "#a1bfff"
-        },
-        highlight: {
-          background: "rgba(250, 250, 250, .16)",
-          focusBackground: "rgba(250, 250, 250, .24)",
-          color: "rgba(255,255,255,.87)",
-          focusColor: "rgba(255,255,255,.87)"
-        },
-        surface: {
-        }
-      }
+      // dark: {
+      //   primary: {
+      //     color: "#e0e7ff",
+      //     hoverColor: "#c0d4ff",
+      //     activeColor: "#a1bfff"
+      //   },
+      //   highlight: {
+      //     background: "rgba(250, 250, 250, .16)",
+      //     focusBackground: "rgba(250, 250, 250, .24)",
+      //     color: "rgba(255,255,255,.87)",
+      //     focusColor: "rgba(255,255,255,.87)"
+      //   },
+      //   surface: {
+      //   }
+      // }
     }
   }
 });

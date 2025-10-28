@@ -2,7 +2,6 @@
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    /* let content start at top and allow inner area to scroll when needed */
     justify-content: flex-start;
 
     h2{
@@ -20,9 +19,9 @@
 .tasks-list{
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    max-height: calc(100vh - 412px);
-    overflow-y: auto;/* small space so the end of cards aren't hidden by scrollbar */
+    // gap: 10px;
+    max-height: calc(100vh - 396px);
+    overflow-y: auto;
 }
 
 app-task-card {
@@ -32,5 +31,9 @@ app-task-card {
     border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.245);
     cursor:move;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }
   

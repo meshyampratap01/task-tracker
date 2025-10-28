@@ -1,46 +1,76 @@
-.container{
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .info-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    .info-container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3rem;
+      flex-wrap: wrap;
 
-        p{
-            font-size: 16px;
-            color:var(--color-muted);
-        }
-    }
+      p {
+        font-size: 16px;
+        color: var(--color-text);
+      }
 
-    .board-container{
-        margin-top: 20px;
-        margin-bottom: 20px;
-        width: 90%;
-        height: 70vh;
-        background-color: var(--color-surface);
+      .add-task-btn {
+        background-color: var(--color-primary);
+        color: white;
+        border: none;
+        padding: 0.6rem 1.2rem;
         border-radius: var(--radius-sm);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+        font-weight: 500;
+        cursor: pointer;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        overflow: auto;
-        padding: var(--space-md);
+        align-items: center;
+        gap: 0.5rem;
+        transition: background-color 0.3s ease;
+
+        i {
+          font-size: 1rem;
+        }
+
+        &:hover {
+          background-color: var(--color-primary-700);
+        }
+      }
     }
+  }
+
+  .board-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 90%;
+    height: 70vh;
+    background-color: var(--color-surface);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    overflow: auto;
+    padding: var(--space-md);
+  }
 }
 
 app-task-column {
-  flex: 1;                
-  min-width: 250px;     
-  max-width: 350px;    
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
   background-color: var(--color-bg);
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.319);
-  min-height: 100%; 
+  min-height: 100%;
   overflow: auto;
 }

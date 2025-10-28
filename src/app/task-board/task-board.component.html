@@ -1,12 +1,27 @@
 <app-header></app-header>
 <div class="container">
-    <div class="info-container">
+  <div class="info-container">
     <h2>Kanban Style Task Board</h2>
-    <p>Manage your tasks efficiently with our intuitive task board. Drag and drop tasks between columns to keep track of your progress.</p>
+    <div class="info-row">
+      <p>
+        Manage your tasks efficiently with our reactive task board. Add Todo tasks. Drag and
+        drop tasks between columns to keep track of your progress.
+      </p>
+
+      <button type="button" class="add-task-btn">
+        <i class="pi pi-plus"></i> Add Task
+      </button>
     </div>
+  </div>
   <div class="board-container" cdkDropListGroup>
     @for (column of columns; track column.label) {
-    <app-task-column [tasks]="gettasksByStatus(column.status)" [label]="column.label" cdkDropList [cdkDropListData]="gettasksByStatus(column.status)" (cdkDropListDropped)="onDrop($event,column.status)"></app-task-column>
+    <app-task-column
+      [tasks]="gettasksByStatus(column.status)"
+      [label]="column.label"
+      cdkDropList
+      [cdkDropListData]="gettasksByStatus(column.status)"
+      (cdkDropListDropped)="onDrop($event, column.status)"
+    ></app-task-column>
     }
   </div>
 </div>

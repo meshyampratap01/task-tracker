@@ -1,11 +1,10 @@
-import { Component, DestroyRef, OnDestroy, OnInit } from '@angular/core';
+import { Component, DestroyRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 
 import { HeaderComponent } from "../header/header.component";
 import { Task } from '../models/task.model';
 import { TaskService } from '../services/task.service';
 import { TaskColumnComponent } from "./task-column/task-column.component";
 import { CdkDragDrop, DragDropModule, moveItemInArray } from '@angular/cdk/drag-drop';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-task-board',
