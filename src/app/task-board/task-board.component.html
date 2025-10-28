@@ -8,11 +8,12 @@
         drop tasks between columns to keep track of your progress.
       </p>
 
-      <button type="button" class="add-task-btn">
+      <button type="button" class="add-task-btn" (click)="addTask.open()">
         <i class="pi pi-plus"></i> Add Task
       </button>
     </div>
   </div>
+  <app-add-task #addTask></app-add-task>
   <div class="board-container" cdkDropListGroup>
     @for (column of columns; track column.label) {
     <app-task-column

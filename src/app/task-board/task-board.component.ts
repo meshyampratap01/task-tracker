@@ -5,10 +5,11 @@ import { Task } from '../models/task.model';
 import { TaskService } from '../services/task.service';
 import { TaskColumnComponent } from "./task-column/task-column.component";
 import { CdkDragDrop, DragDropModule, moveItemInArray } from '@angular/cdk/drag-drop';
+import { AddTaskComponent } from './add-task/add-task.component';
 
 @Component({
   selector: 'app-task-board',
-  imports: [HeaderComponent, TaskColumnComponent, DragDropModule],
+  imports: [HeaderComponent, TaskColumnComponent, DragDropModule, AddTaskComponent],
   templateUrl: './task-board.component.html',
   styleUrl: './task-board.component.scss'
 })

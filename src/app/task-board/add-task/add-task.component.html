@@ -1,0 +1,30 @@
+<div class="add-task-host">
+  <dialog #dialog class="modal" (click)="onDialogClick($event)">
+    <div class="modal-body">
+      <header class="modal-header">
+        <h3>Add Task</h3>
+        <button type="button" class="close-btn" (click)="close()" aria-label="Close">×</button>
+      </header>
+
+      <form #taskForm="ngForm" (ngSubmit)="onSubmit(taskForm)" novalidate>
+        <div class="form-row">
+          <label for="title">Title</label>
+          <input id="title" placeholder="For eg. Complete xyz Task" name="title" type="text" [(ngModel)]="title" required #titleInput="ngModel" />
+          <div class="error" *ngIf="(titleInput.invalid && (titleInput.touched || formSubmitted))">
+            Title is required
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="description">Description</label>
+          <textarea id="description" placeholder="Enter Description of task" name="description" rows="4" [(ngModel)]="description"></textarea>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="btn btn-secondary" (click)="close()">Cancel</button>
+          <button type="submit" class="btn btn-primary" [disabled]="taskForm.invalid">Add Task</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+</div>
