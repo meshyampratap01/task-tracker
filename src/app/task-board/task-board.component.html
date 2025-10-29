@@ -1,12 +1,10 @@
 <app-header></app-header>
 <div class="container">
   <div class="info-container">
-    <h2>Kanban Style Task Board</h2>
+    <h2>{{ taskBoardConstants.heading }}</h2>
     <div class="info-row">
       <p>
-        Manage your tasks efficiently with our reactive task board. Add Todo
-        tasks. Drag and drop tasks between columns to keep track of your
-        progress.
+       {{ taskBoardConstants.description }}
       </p>
 
       <button type="button" class="add-task-btn" (click)="addTask.open()">

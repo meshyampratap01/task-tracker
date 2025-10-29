@@ -4,6 +4,7 @@ import { NgClass } from '@angular/common';
 
 import { Task } from '../../models/task.model';
 import { TaskCardComponent } from '../task-card/task-card.component';
+import { taskBoardConstants } from '../../constants/task-board-page/task-board-page-constants';
 
 @Component({
   selector: 'app-task-column',
@@ -14,4 +15,5 @@ import { TaskCardComponent } from '../task-card/task-card.component';
 export class TaskColumnComponent {
   tasks: InputSignal<Task[]> = input.required<Task[]>();
   label: InputSignal<string> = input.required<string>();
+
 }

@@ -10,6 +10,7 @@ import { Task } from '../models/task.model';
 import { TaskService } from '../services/task.service';
 import { TaskColumnComponent } from './task-column/task-column.component';
 import { AddTaskComponent } from './add-task/add-task.component';
+import { taskBoardConstants } from '../constants/task-board-page/task-board-page-constants';
 
 @Component({
   selector: 'app-task-board',
@@ -24,6 +25,7 @@ import { AddTaskComponent } from './add-task/add-task.component';
 })
 export class TaskBoardComponent implements OnInit {
   tasks: Task[] = [];
+  readonly taskBoardConstants = taskBoardConstants;
 
   columns: { label: string; status: 'todo' | 'in-progress' | 'done' }[] = [
     { label: 'To Do', status: 'todo' },
