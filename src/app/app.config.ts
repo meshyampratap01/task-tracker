@@ -14,7 +14,10 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
     providePrimeNG({
       theme: {
-        preset: customPreset
+        preset: customPreset,
+        options: {
+          darkModeSelector: false || 'none',
+        },
       }
     })
   ],
