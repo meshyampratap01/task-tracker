@@ -8,7 +8,7 @@
           type="search"
           class="search-input"
           placeholder="Search {{label()}}..."
-          (input)="onSearch($any($event.target).value)"
+          [(ngModel)]="searchTerm"
           (blur)="onSearchBlur()"
         />
       </div>

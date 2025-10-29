@@ -1,14 +1,14 @@
 import { Component, input, InputSignal, signal, computed } from '@angular/core';
 import { CdkDrag } from '@angular/cdk/drag-drop';
 import { NgClass } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { Task } from '../../models/task.model';
 import { TaskCardComponent } from '../task-card/task-card.component';
-import { taskBoardConstants } from '../../constants/task-board-page/task-board-page-constants';
 
 @Component({
   selector: 'app-task-column',
-  imports: [TaskCardComponent, CdkDrag, NgClass],
+  imports: [TaskCardComponent, CdkDrag, NgClass, FormsModule],
   templateUrl: './task-column.component.html',
   styleUrl: './task-column.component.scss',
 })
