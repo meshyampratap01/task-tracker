@@ -25,7 +25,7 @@ export class TaskService {
   }
 
   addTask(task: Task): void {
-    const updatedTasks = [...this.tasks.value, task];
+    const updatedTasks = [task, ...this.tasks.value];
     this.tasks.next(updatedTasks);
     this.saveTasks(updatedTasks);
   }
@@ -42,41 +42,6 @@ export class TaskService {
     const updatedTasks = this.tasks.value.filter((task) => task.id !== taskId);
     this.tasks.next(updatedTasks);
     this.saveTasks(updatedTasks);
-  }
-
-  putTasks(): void {
-    const tasks: Task[] = [
-      {
-        id: '1',
-        title: 'Sample Task',
-        description: 'This is a sample task.',
-        status: 'todo',
-        createdAt: new Date(),
-      },
-      {
-        id: '2',
-        title: 'Another Task',
-        description: 'This is another sample task.',
-        status: 'in-progress',
-        createdAt: new Date(),
-      },
-      {
-        id: '3',
-        title: 'Completed Task',
-        description: 'This task is completed.',
-        status: 'done',
-        createdAt: new Date(),
-      },
-      {
-        id: '4',
-        title: 'Fourth Task',
-        description: 'This is the fourth sample task.',
-        status: 'todo',
-        createdAt: new Date(),
-      },
-    ];
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-    this.tasks.next(this.loadTasks());
   }
 
   logout(): void {

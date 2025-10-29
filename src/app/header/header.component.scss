@@ -11,6 +11,14 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 1rem;
+
+		.logo{
+			display: flex;
+			gap: 0.5rem;
+			i{
+				margin-top: 7px;
+			}
+		}
 	}
 
 	&__title {
@@ -23,6 +31,8 @@
 		background: transparent;
 		border: 1px solid var(--color-danger);
 		color: var(--color-danger);
+		display: flex;
+		gap: 1rem;
 		padding: 0.35rem 0.6rem;
 		border-radius: var(--radius-sm);
 		font-size: 0.9rem;

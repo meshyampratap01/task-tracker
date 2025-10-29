@@ -1,35 +1,35 @@
 :host {
-	display: block;
-	padding: var(--space-md);
-	text-align: center;
-	color: var(--color-text);
+  display: block;
+  padding: var(--space-md);
+  text-align: center;
+  color: var(--color-text);
 }
 
 .welcome-container h1 {
-	margin-bottom: 0.5rem;
-	font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
 }
 
 .lead {
-	color: var(--color-muted);
-	max-width: 640px;
-	margin: 0.5rem auto 1rem auto;
+  color: var(--color-muted);
+  max-width: 640px;
+  margin: 0.5rem auto 1rem auto;
 }
 
 .actions {
-	margin-top: 1.25rem;
+  margin-top: 1.25rem;
 }
 
 .get-started {
-	background-color: var(--color-primary);
-	color: #fff;
-	border: none;
-	padding: 0.6rem 1.1rem;
-	font-size: 1rem;
-	border-radius: var(--radius-sm);
-	cursor: pointer;
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.1rem;
+  font-size: 1rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
 }
 
 .get-started:hover {
-	background-color: var(--color-primary-700);
+  background-color: var(--color-primary-700);
 }

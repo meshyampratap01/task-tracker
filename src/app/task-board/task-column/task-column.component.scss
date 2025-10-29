@@ -1,39 +1,32 @@
-.container{
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
-    h2{
-        margin-bottom: 10px;
-        color: var(--color-primary);
-        align-self: center;
-    }
+  h2 {
+    margin-bottom: 10px;
+    color: var(--color-primary);
+    align-self: center;
+  }
 
-    p{
-        font-size: 16px;
-        color:var(--color-muted);
-    }
+  p {
+    font-size: 16px;
+    color: var(--color-muted);
+  }
 }
 
-.tasks-list{
-    display: flex;
-    flex-direction: column;
-    // gap: 10px;
-    max-height: calc(100vh - 396px);
-    overflow-y: auto;
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  // gap: 10px;
+  max-height: calc(100vh - 346px);
+  overflow-y: auto;
 }
 
 app-task-card {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: var(--color-card-bg);
-    border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.245);
-    cursor:move;
+  margin: 10px;
 }
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
-  

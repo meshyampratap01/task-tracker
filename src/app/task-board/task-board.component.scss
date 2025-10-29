@@ -15,7 +15,6 @@
       justify-content: space-between;
       align-items: center;
       gap: 3rem;
-      flex-wrap: wrap;
 
       p {
         font-size: 16px;
@@ -47,11 +46,9 @@
   }
 
   .board-container {
-    margin-top: 20px;
-    margin-bottom: 20px;
     width: 90%;
     height: 70vh;
-    background-color: var(--color-surface);
+    background-color: var(--color-bg);
     border-radius: var(--radius-sm);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
     display: flex;
@@ -70,7 +67,7 @@ app-task-column {
   background-color: var(--color-bg);
   border-radius: 8px;
   padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.319);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.205);
   min-height: 100%;
   overflow: auto;
 }

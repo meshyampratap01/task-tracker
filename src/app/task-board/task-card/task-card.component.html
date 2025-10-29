@@ -1,5 +1,24 @@
-<div class="task-card">
-    <h3>{{ task().title }}</h3>
-    <p>{{ task().description }}</p>
-    <p><strong>Created At:</strong> {{ task().createdAt | date: 'short' }}</p>
+<p-confirmdialog></p-confirmdialog>
+<div class="task-card" [ngClass]="task().status">
+  <div class="task-header">
+    <h3>{{ task().title | titlecase }}</h3>
+    <button type="button" class="delete-btn" (click)="onDeleteTask()">
+      <i class="pi pi-trash"></i>
+    </button>
+  </div>
+
+  <p class="description">
+    {{ task().description || "No description provided." }}
+  </p>
+
+  <div class="task-data">
+    <span
+      ><strong>Created:</strong> {{ task().createdAt | date : "short" }}</span
+    >
+    @if (task().updatedAt) {
+    <span
+      ><strong>Updated:</strong> {{ task().updatedAt | date : "short" }}</span
+    >
+    }
+  </div>
 </div>
