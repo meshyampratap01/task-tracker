@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: flex-start;
 
-  h2 {
+  h1 {
     margin-bottom: 10px;
     color: var(--color-primary);
     align-self: center;
@@ -15,11 +15,32 @@
   }
 }
 
+.search-wrap{
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+
+  input {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    color: var(--color-text);
+    background: var(--color-card-bg);
+
+    &::placeholder {
+      color: var(--color-muted);
+    }
+  }
+}
+
 .tasks-list {
   display: flex;
   flex-direction: column;
   // gap: 10px;
-  max-height: calc(100vh - 346px);
+  max-height: calc(100vh - 380px);
   overflow-y: auto;
 }
 
@@ -30,3 +51,59 @@ app-task-card {
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+  .task-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .column-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  }
+
+  .column-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 0;
+    letter-spacing: 0.2px;
+  }
+
+  .count-badge {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-700));
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.22rem 0.6rem;
+    border-radius: 999px;
+    box-shadow: 0 4px 10px rgba(17, 24, 39, 0.08);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+    height: 28px;
+  }
+
+  .tasks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding-top: 0.6rem;
+    max-height: calc(75vh - 170px);
+    overflow: auto;
+  }
+
+  .empty-state {
+    padding: 1.2rem 0.6rem;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.45);
+    font-style: italic;
+    background: linear-gradient(180deg, rgba(0,0,0,0.01), transparent);
+    border-radius: 6px;
+  }
