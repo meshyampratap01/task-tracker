@@ -36,5 +36,4 @@ export class TaskColumnComponent {
   onSearchBlur() {
     this.searchTerm.set('');
   }
-
 }

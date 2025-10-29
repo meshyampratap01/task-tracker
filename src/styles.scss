@@ -1,49 +1,54 @@
 @import "primeicons/primeicons.css";
 :root {
-	--color-primary: #1976d2;
-	--color-primary-700: #125ea8;
-	--color-accent: #00bcd4;
+  --color-primary: #1976d2;
+  --color-primary-700: #125ea8;
+  --color-accent: #00bcd4;
 
-	--color-bg: #f7f9fb;
-	--color-surface: #ffffff;
-	--color-card-bg: rgba(255, 255, 255, 0.85);
+  --color-bg: #f7f9fb;
+  --color-surface: #ffffff;
+  --color-card-bg: rgba(255, 255, 255, 0.85);
 
-	--color-text: #222222;
-	--color-muted: #6b7280;
+  --color-text: #222222;
+  --color-muted: #6b7280;
 
-	--color-border: rgba(0, 0, 0, 0.25);
-	--card-shadow: 0 10px 30px rgba(16,24,40,0.08), 0 4px 8px rgba(16,24,40,0.06);
-	--gradient: linear-gradient(135deg, rgba(25,118,210,0.06), rgba(0,188,212,0.03));
+  --color-border: rgba(0, 0, 0, 0.25);
+  --card-shadow: 0 10px 30px rgba(16, 24, 40, 0.08),
+    0 4px 8px rgba(16, 24, 40, 0.06);
+  --gradient: linear-gradient(
+    135deg,
+    rgba(25, 118, 210, 0.06),
+    rgba(0, 188, 212, 0.03)
+  );
 
-	--color-danger: #d32f2f;
-	--color-danger-700: #b71c1c;
+  --color-danger: #d32f2f;
+  --color-danger-700: #b71c1c;
 
-	--radius-sm: 6px;
-	--radius-md: 12px;
-	--space-xs: 0.25rem;
-	--space-sm: 0.5rem;
-	--space-md: 1rem;
-	--space-lg: 2rem;
-	--max-width: 1100px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --max-width: 1100px;
 }
 
-html, body {
-	height: 100%;
+html,
+body {
+  height: 100%;
 }
 body {
-	margin: 0;
-	font-family: "Segoe UI", "Roboto", Arial, sans-serif;
-	font-size: 16px;
-	background-color: var(--color-bg);
-	color: var(--color-text);
+  margin: 0;
+  font-family: "Segoe UI", "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
 .cdk-drag-preview {
   box-sizing: border-box;
   border-radius: 4px;
   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
-              0 8px 10px 1px rgba(0, 0, 0, 0.14),
-              0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
 }
 
 .cdk-drag-placeholder {
@@ -56,75 +61,84 @@ body {
 
 .p-confirmdialog,
 .p-confirm-dialog {
-	--confirm-bg: rgba(255, 255, 255, 0.98);
-	--confirm-border: rgba(16, 24, 40, 0.06);
-	--confirm-shadow: 0 12px 36px rgba(16,24,40,0.12);
+  --confirm-bg: rgba(255, 255, 255, 0.98);
+  --confirm-border: rgba(16, 24, 40, 0.06);
+  --confirm-shadow: 0 12px 36px rgba(16, 24, 40, 0.12);
 
-	.p-confirm-dialog-content, & {
-		background: var(--confirm-bg);
-		border-radius: calc(var(--radius-md) / 1.2);
-		box-shadow: var(--confirm-shadow);
-		border: 1px solid var(--confirm-border);
-		padding: 1rem 1.15rem;
-		color: var(--color-text);
-		max-width: 560px;
-	}
+  .p-confirm-dialog-content,
+  & {
+    background: var(--confirm-bg);
+    border-radius: calc(var(--radius-md) / 1.2);
+    box-shadow: var(--confirm-shadow);
+    border: 1px solid var(--confirm-border);
+    padding: 1rem 1.15rem;
+    color: var(--color-text);
+    max-width: 560px;
+  }
 
-	.p-confirm-dialog-message {
-		display: flex;
-		gap: 0.9rem;
-		align-items: center;
-		padding: 0.25rem 0.25rem 0.75rem 0;
-	}
+  .p-confirm-dialog-message {
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+    padding: 0.25rem 0.25rem 0.75rem 0;
+  }
 
-	.p-confirm-dialog-icon, .p-confirm-dialog .p-confirm-icon {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		width: 56px;
-		height: 56px;
-		border-radius: 50%;
-		background: linear-gradient(135deg, var(--color-primary), var(--color-primary-700));
-		color: #fff;
-		box-shadow: 0 8px 20px rgba(17,24,39,0.08);
-		flex-shrink: 0;
-		font-size: 1.05rem;
-	}
+  .p-confirm-dialog-icon,
+  .p-confirm-dialog .p-confirm-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(
+      135deg,
+      var(--color-primary),
+      var(--color-primary-700)
+    );
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(17, 24, 39, 0.08);
+    flex-shrink: 0;
+    font-size: 1.05rem;
+  }
 
-	/* Message text */
-	.p-confirm-dialog-message p,
-	.p-confirm-dialog-message .p-confirm-dialog-text {
-		margin: 0;
-		font-size: 1rem;
-		color: var(--color-text);
-		line-height: 1.3;
-	}
+  .p-confirm-dialog-message p,
+  .p-confirm-dialog-message .p-confirm-dialog-text {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--color-text);
+    line-height: 1.3;
+  }
 
-	.p-confirm-dialog-footer {
-		display: flex;
-		gap: 0.6rem;
-		justify-content: flex-end;
-		padding-top: 0.6rem;
-	}
+  .p-confirm-dialog-footer {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: flex-end;
+    padding-top: 0.6rem;
+  }
 
-	.p-confirm-dialog-footer .p-button {
-		border-radius: var(--radius-sm);
-		font-weight: 600;
-	}
+  .p-confirm-dialog-footer .p-button {
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+  }
 
-	.p-confirm-dialog-footer .p-button.p-confirm-dialog-accept,
-	.p-confirm-dialog-footer .p-button.p-confirm-accept,
-	.p-confirm-dialog-footer .p-button.p-confirm {
-		background: linear-gradient(135deg, var(--color-primary), var(--color-primary-700));
-		color: #fff;
-		border: 1px solid rgba(0,0,0,0.04);
-		box-shadow: 0 8px 20px rgba(17,24,39,0.06);
-	}
+  .p-confirm-dialog-footer .p-button.p-confirm-dialog-accept,
+  .p-confirm-dialog-footer .p-button.p-confirm-accept,
+  .p-confirm-dialog-footer .p-button.p-confirm {
+    background: linear-gradient(
+      135deg,
+      var(--color-primary),
+      var(--color-primary-700)
+    );
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 8px 20px rgba(17, 24, 39, 0.06);
+  }
 
-	.p-confirm-dialog-footer .p-button.p-confirm-dialog-reject,
-	.p-confirm-dialog-footer .p-button.p-confirm-reject {
-		background: transparent;
-		color: var(--color-text);
-		border: 1px solid rgba(0,0,0,0.06);
-	}
+  .p-confirm-dialog-footer .p-button.p-confirm-dialog-reject,
+  .p-confirm-dialog-footer .p-button.p-confirm-reject {
+    background: transparent;
+    color: var(--color-text);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+  }
 }

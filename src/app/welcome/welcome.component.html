@@ -1,13 +1,16 @@
 <section class="welcome-hero">
-	<div class="hero-card simple">
+  <div class="hero-card simple">
+    <h1 class="title">
+      <i class="pi pi-verified"></i>{{ welcomeConstants.heading }}
+    </h1>
+    <p class="hero-description">
+      {{ welcomeConstants.description1 }}
+    </p>
 
-		<h1 class="title"><i class="pi pi-verified"></i>{{ welcomeConstants.heading }}</h1>
-		<p class="hero-description">
-			{{ welcomeConstants.description1 }}
-		</p>
-
-		<div class="actions">
-			<button routerLink="tasks" class="btn btn-primary">Open Task Tracker</button>
-		</div>
-	</div>
+    <div class="actions">
+      <button routerLink="tasks" class="btn btn-primary">
+        Open Task Tracker
+      </button>
+    </div>
+  </div>
 </section>

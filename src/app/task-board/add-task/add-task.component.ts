@@ -1,6 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm } from '@angular/forms';
+
 import { TaskService } from '../../services/task.service';
 import { Task } from '../../models/task.model';
 
@@ -8,7 +9,7 @@ import { Task } from '../../models/task.model';
   selector: 'app-add-task',
   imports: [CommonModule, FormsModule],
   templateUrl: './add-task.component.html',
-  styleUrl: './add-task.component.scss'
+  styleUrl: './add-task.component.scss',
 })
 export class AddTaskComponent {
   @ViewChild('dialog') dialogRef!: ElementRef<HTMLDialogElement>;

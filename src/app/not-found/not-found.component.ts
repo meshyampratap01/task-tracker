@@ -5,12 +5,13 @@ import { Location } from '@angular/common';
   selector: 'app-not-found',
   imports: [],
   templateUrl: './not-found.component.html',
-  styleUrl: './not-found.component.scss'
+  styleUrl: './not-found.component.scss',
 })
 export class NotFoundComponent {
-  constructor(private location: Location){}
+  constructor(private location: Location) {}
 
-  goBack():void{
+  goBack(): void {
     this.location.back();
   }
+  
 }

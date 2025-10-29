@@ -25,10 +25,11 @@ import { ConfirmationService } from 'primeng/api';
 })
 export class TaskCardComponent {
   task = input.required<Task>();
+  
   private taskService = inject(TaskService);
   private confirmationService = inject(ConfirmationService);
 
-  onDeleteTask():void {
+  onDeleteTask(): void {
     this.confirmationService.confirm({
       message: `Delete task with title "${this.task().title}"?`,
       header: 'Confirmation',

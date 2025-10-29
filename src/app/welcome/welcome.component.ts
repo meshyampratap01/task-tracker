@@ -9,6 +9,5 @@ import { welcomePageStrings } from '../constants/welcome-page/welcome-page-const
   styleUrl: './welcome.component.scss',
 })
 export class WelcomeComponent {
-  readonly welcomeConstants =welcomePageStrings;
-
+  readonly welcomeConstants = welcomePageStrings;
 }

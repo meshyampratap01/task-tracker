@@ -24,7 +24,6 @@
   // gap: 2rem;
   align-items: center;
 
-  /* Minimal hero card for the simplified welcome page */
   .hero-card.simple {
     width: 100%;
     max-width: var(--max-width);
@@ -39,36 +38,35 @@
     gap: var(--space-sm);
     text-align: center;
     background-image: var(--gradient);
-    border: 1px solid rgba(255,255,255,0.4);
+    border: 1px solid rgba(255, 255, 255, 0.4);
   }
-.title {
-  margin: 0 0 0.5rem 0;
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  line-height: 1.05;
-  color: var(--color-text);
-}
+  .title {
+    margin: 0 0 0.5rem 0;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1.05;
+    color: var(--color-text);
+  }
 
-.title {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-
-  i.pi-verified {
-    margin-top: 5px;
+  .title {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    min-width: 44px;
-    font-size: 2.05rem;
-    color: var(--color-primary-700);
+    gap: 0.6rem;
+
+    i.pi-verified {
+      margin-top: 5px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 44px;
+      font-size: 2.05rem;
+      color: var(--color-primary-700);
+    }
   }
-}
 
-.hero-description{
-  text-align: center;
-  max-width: 600px;
-}
-
+  .hero-description {
+    text-align: center;
+    max-width: 600px;
+  }
 
   .actions {
     margin-top: 0.75rem;
@@ -91,18 +89,12 @@
     background: var(--color-primary);
     color: #fff;
     border-color: var(--color-primary-700);
-    box-shadow: 0 6px 18px rgba(25,118,210,0.12);
+    box-shadow: 0 6px 18px rgba(25, 118, 210, 0.12);
   }
 
   .btn-primary:hover {
     background: var(--color-primary-700);
     transform: translateY(-1px);
-    box-shadow: 0 10px 24px rgba(25,118,210,0.14);
-  }
-
-  @media (max-width: 600px) {
-    .hero-card.simple { padding: var(--space-md); }
-    .title { font-size: 1.6rem; }
-    .btn { width: 100%; }
+    box-shadow: 0 10px 24px rgba(25, 118, 210, 0.14);
   }
 }
