@@ -19,21 +19,21 @@ export class TaskColumnComponent {
   searchTerm = signal('');
 
   filteredTasks = computed(() => {
-    const q = this.searchTerm().trim().toLowerCase();
-    const all = this.tasks();
-    if (!q) return all;
-    return all.filter((t) => {
-      const title = (t.title || '').toString().toLowerCase();
-      const desc = (t.description || '').toString().toLowerCase();
-      return title.includes(q) || desc.includes(q);
+    const query = this.searchTerm().trim().toLowerCase();
+    const allTasks = this.tasks();
+    if (!query) return allTasks;
+    return allTasks.filter((task) => {
+      const title = (task.title || '').toString().toLowerCase();
+      const desc = (task.description || '').toString().toLowerCase();
+      return title.includes(query) || desc.includes(query);
     });
   });
 
-  onSearch(value: string) {
+  onSearch(value: string): void {
     this.searchTerm.set(value || '');
   }
 
-  onSearchBlur() {
+  onSearchBlur(): void {
     this.searchTerm.set('');
   }
 }

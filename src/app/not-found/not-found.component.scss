@@ -5,13 +5,12 @@
   justify-content: center;
   height: 100vh;
   text-align: center;
-  background-color: #f8f9fa;
-  color: #333;
+  background-color: var(--color-bg);
 
   h1 {
     font-size: 6rem;
     margin-bottom: 1rem;
-    color: #dc3545;
+    color: var(--color-danger);
   }
 
   p {
@@ -22,15 +21,15 @@
   button {
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
-    background-color: #007bff;
-    color: white;
+    background-color: var(--color-primary);
+    color: var(--color-bg);
     border: none;
     border-radius: 0.3rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #0056b3;
+      background-color: var(--color-primary-700);
     }
   }
 }

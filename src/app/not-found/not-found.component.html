@@ -1,5 +1,5 @@
 <div class="page-not-found">
-  <h1>404</h1>
-  <p>Oops! The page you're looking for doesn't exist.</p>
-  <button (click)="goBack()">Go Back</button>
+  <h1>{{ constants.notFoundError }}</h1>
+  <p>{{constants.notFoundErrorMessage}}</p>
+  <button (click)="goBack()">{{ constants.goBack }}</button>
 </div>

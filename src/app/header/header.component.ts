@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 import { TaskService } from '../services/task.service';
+import { constants } from '../constants/constants';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +12,8 @@ import { TaskService } from '../services/task.service';
 })
 export class HeaderComponent {
   taskService = inject(TaskService);
+
+  readonly constants = constants;
 
   logout(): void {
     this.taskService.logout();

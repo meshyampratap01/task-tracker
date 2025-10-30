@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { welcomePageStrings } from '../constants/welcome-page/welcome-page-constants';
+
+import { constants } from '../constants/constants';
 
 @Component({
   selector: 'app-welcome',
@@ -9,5 +10,5 @@ import { welcomePageStrings } from '../constants/welcome-page/welcome-page-const
   styleUrl: './welcome.component.scss',
 })
 export class WelcomeComponent {
-  readonly welcomeConstants = welcomePageStrings;
+  readonly welcomeConstants = constants;
 }

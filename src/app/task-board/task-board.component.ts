@@ -10,7 +10,7 @@ import { Task } from '../models/task.model';
 import { TaskService } from '../services/task.service';
 import { TaskColumnComponent } from './task-column/task-column.component';
 import { AddTaskComponent } from './add-task/add-task.component';
-import { taskBoardConstants } from '../constants/task-board-page/task-board-page-constants';
+import { constants } from '../constants/constants';
 
 @Component({
   selector: 'app-task-board',
@@ -25,7 +25,7 @@ import { taskBoardConstants } from '../constants/task-board-page/task-board-page
 })
 export class TaskBoardComponent implements OnInit {
   tasks: Task[] = [];
-  readonly taskBoardConstants = taskBoardConstants;
+  readonly taskBoardConstants = constants;
 
   columns: { label: string; status: 'todo' | 'in-progress' | 'done' }[] = [
     { label: 'To Do', status: 'todo' },
@@ -39,7 +39,7 @@ export class TaskBoardComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const taskSubscription = this.taskService.tasks$.subscribe((tasks) => {
+    const taskSubscription = this.taskService.tasks$.subscribe((tasks: Task[]) => {
       this.tasks = tasks;
     });
 

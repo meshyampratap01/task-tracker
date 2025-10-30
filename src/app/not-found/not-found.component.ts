@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Location } from '@angular/common';
+import { constants } from '../constants/constants';
 
 @Component({
   selector: 'app-not-found',
@@ -9,6 +10,8 @@ import { Location } from '@angular/common';
 })
 export class NotFoundComponent {
   constructor(private location: Location) {}
+
+  readonly constants = constants;
 
   goBack(): void {
     this.location.back();

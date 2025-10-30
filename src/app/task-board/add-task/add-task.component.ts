@@ -4,6 +4,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 
 import { TaskService } from '../../services/task.service';
 import { Task } from '../../models/task.model';
+import { constants } from '../../constants/constants';
 
 @Component({
   selector: 'app-add-task',
@@ -14,46 +15,40 @@ import { Task } from '../../models/task.model';
 export class AddTaskComponent {
   @ViewChild('dialog') dialogRef!: ElementRef<HTMLDialogElement>;
   @ViewChild('taskForm') taskFormRef!: NgForm;
-  title = '';
-  description = '';
-  formSubmitted = false;
+
+  readonly constants = constants;
+
+  title: string = '';
+  description: string = '';
+
+  formSubmitted: boolean = false;
 
   constructor(private taskService: TaskService) {}
 
-  open() {
+  open(): void {
     this.reset();
     this.formSubmitted = false;
-    try {
-      this.dialogRef?.nativeElement?.showModal();
-    } catch (e) {
-      const dlg = this.dialogRef?.nativeElement;
-      if (dlg && typeof dlg.showModal === 'function') dlg.showModal();
-    }
+    this.dialogRef?.nativeElement?.showModal();
   }
 
-  close() {
-    try {
-      this.dialogRef?.nativeElement?.close();
-    } catch (e) {
-      const dlg = this.dialogRef?.nativeElement;
-      if (dlg && typeof dlg.close === 'function') dlg.close();
-    }
+  close(): void {
+    this.dialogRef?.nativeElement?.close();
   }
 
-  reset() {
+  reset(): void {
     this.taskFormRef.resetForm();
     this.title = '';
     this.description = '';
   }
 
-  onSubmit(form: NgForm) {
+  onSubmit(form: NgForm): void {
     this.formSubmitted = true;
     if (!form.valid) {
       return;
     }
 
     const newTask: Task = {
-      id: Date.now().toString(36) + Math.random().toString(36).slice(2, 7),
+      id: Date.now().toString(),
       title: this.title.trim(),
       description: this.description ? this.description.trim() : undefined,
       status: 'todo',
@@ -64,7 +59,7 @@ export class AddTaskComponent {
     this.close();
   }
 
-  onDialogClick(event: MouseEvent) {
+  onDialogClick(event: MouseEvent): void {
     if (event.target === this.dialogRef?.nativeElement) {
       this.close();
     }

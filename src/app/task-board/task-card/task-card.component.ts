@@ -1,4 +1,4 @@
-import { Component, inject, input, Signal } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { DatePipe, NgClass, TitleCasePipe } from '@angular/common';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 
@@ -8,6 +8,7 @@ import { Task } from '../../models/task.model';
 import { FormsModule } from '@angular/forms';
 import { TaskService } from '../../services/task.service';
 import { ConfirmationService } from 'primeng/api';
+import { constants } from '../../constants/constants';
 
 @Component({
   selector: 'app-task-card',
@@ -25,14 +26,16 @@ import { ConfirmationService } from 'primeng/api';
 })
 export class TaskCardComponent {
   task = input.required<Task>();
-  
+
+  readonly constants = constants;
+
   private taskService = inject(TaskService);
   private confirmationService = inject(ConfirmationService);
 
   onDeleteTask(): void {
     this.confirmationService.confirm({
       message: `Delete task with title "${this.task().title}"?`,
-      header: 'Confirmation',
+      header: this.constants.deleteTaskHeader,
       closable: true,
       closeOnEscape: true,
       rejectButtonProps: {
