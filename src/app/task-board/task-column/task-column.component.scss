@@ -76,12 +76,8 @@ app-task-card {
 }
 
 .count-badge {
-  background: linear-gradient(
-    135deg,
-    var(--color-primary),
-    var(--color-primary-700)
-  );
-  color: #fff;
+  background: var(--color-primary);
+  color: var(--color-card-bg);
   font-size: 0.85rem;
   font-weight: 600;
   padding: 0.22rem 0.6rem;
@@ -92,6 +88,7 @@ app-task-card {
   justify-content: center;
   min-width: 30px;
   height: 28px;
+  margin-top: 15px;
 }
 
 .tasks-list {
